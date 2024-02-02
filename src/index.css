@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  scroll-behavior: smooth;
+  transition: all 0.3s ease-in-out;
+}
+
+.heroBg {
+  background: url("./assets/heroSocial.png") no-repeat;
+  background-size: contain;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  /* transform: rotate(0deg);
+  animation: rotateHero 100s infinite linear; */
+}
+
+.heroBg .p {
+  animation: none;
+}
+
+@keyframes rotateHero {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 800px) {
+  .heroBg {
+    background: none;
+  }
+}
